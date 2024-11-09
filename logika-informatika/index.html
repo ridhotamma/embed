@@ -53,8 +53,49 @@
                             <td class="border border-gray-300 p-2 text-center">F</td>
                             <td class="border border-gray-300 p-2 text-center">F</td>
                         </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                        </tr>
                     </tbody>
                 </table>
+            </div>
+
+            <div class="mt-4">
+                <p class="font-semibold">Penjelasan:</p>
+                <ul class="list-disc list-inside space-y-2 mt-2">
+                    <li>Untuk F: Karena kondisi adalah "true", maka selalu mengevaluasi (not P and Q)</li>
+                    <li>Untuk G: Ekspresi akan bernilai true hanya jika both P dan Q false, dan kondisional kedua true
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -66,14 +107,79 @@
                 <pre class="bg-gray-100 p-3 rounded font-mono mb-2">F: if (P and Q) then R</pre>
                 <pre class="bg-gray-100 p-3 rounded font-mono">G: if (not R) then (not P or not Q)</pre>
             </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="border border-gray-300 p-2 bg-gray-100">P</th>
+                            <th class="border border-gray-300 p-2 bg-gray-100">Q</th>
+                            <th class="border border-gray-300 p-2 bg-gray-100">R</th>
+                            <th class="border border-gray-300 p-2 bg-gray-100">P and Q</th>
+                            <th class="border border-gray-300 p-2 bg-gray-100">F</th>
+                            <th class="border border-gray-300 p-2 bg-gray-100">not R</th>
+                            <th class="border border-gray-300 p-2 bg-gray-100">not P or not Q</th>
+                            <th class="border border-gray-300 p-2 bg-gray-100">G</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-4">
+                <p class="font-semibold">Kesimpulan:</p>
+                <p class="mt-2">Dari tabel kebenaran di atas, dapat dilihat bahwa F dan G memiliki nilai kebenaran yang
+                    sama untuk setiap kombinasi input P, Q, dan R. Ini membuktikan bahwa kedua pernyataan tersebut
+                    ekuivalen secara logis.</p>
+            </div>
         </div>
 
         <!-- Question 3 -->
         <div class="mb-12">
             <h2 class="text-xl font-bold text-gray-900 mb-4">Soal 3 (30 poin)</h2>
             <div class="mb-4">
-                <pre
-                    class="bg-gray-100 p-3 rounded font-mono">F : if (not R) then (not P if and only if (R and P))</pre>
+                <pre class="bg-gray-100 p-3 rounded font-mono">F : if (not R) then (not P ↔ (R and P))</pre>
             </div>
 
             <div class="bg-gray-100 p-4 rounded">
@@ -91,13 +197,20 @@
             </div>
 
             <div class="mt-6">
-                <h3 class="font-bold mb-2">Analisis:</h3>
-                <ul class="list-disc list-inside space-y-2 mb-4">
-                    <li>Jika R bernilai benar, maka F bernilai benar</li>
-                    <li>Jika R bernilai salah, maka ekspresi (not P ↔ (R and P)) akan selalu bernilai benar karena R and
-                        P akan selalu salah ketika R salah</li>
-                </ul>
-                <p class="font-bold">Kesimpulan: Kalimat F adalah sebuah tautologi.</p>
+                <h3 class="font-bold mb-2">Analisis menggunakan pohon semantik:</h3>
+                <ol class="list-decimal list-inside space-y-2 mb-4">
+                    <li>Jika R true: Kalimat menjadi true karena implikasi bernilai true ketika anteseden false</li>
+                    <li>Jika R false:
+                        <ul class="list-disc list-inside ml-6 mt-2">
+                            <li>R and P akan selalu false</li>
+                            <li>not P ↔ false akan bernilai true jika P true</li>
+                            <li>Ini membuat seluruh implikasi bernilai true</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p class="font-bold mb-2">Kesimpulan:</p>
+                <p>Kalimat F adalah sebuah tautologi karena selalu bernilai true untuk semua kemungkinan nilai R dan P.
+                </p>
             </div>
         </div>
     </div>
