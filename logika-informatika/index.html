@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1 - Logika Informatika</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+</head>
+
+<body class="bg-white">
+    <div class="max-w-5xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-2xl font-bold text-gray-900 mb-4">Tugas Logika Informatika 1</h1>
+            <div class="text-gray-600">
+                <p>Nama: Ridho Tamma Abdillah Bajili</p>
+                <p>NIM: 053340456</p>
+                <p>UPBJJ: Sistem Informasi</p>
+            </div>
+        </div>
+
+        <!-- Question 1 -->
+        <div class="mb-12">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Soal 1 (30 poin)</h2>
+            <div class="mb-4">
+                <p class="mb-2">Diketahui dua kalimat logika proposisional:</p>
+                <pre
+                    class="bg-gray-100 p-3 rounded font-mono mb-2">F: if true then (not P and Q) else (Q or not S)</pre>
+                <pre
+                    class="bg-gray-100 p-3 rounded font-mono">G: not (P or Q) and (if P then R else (P and not Q))</pre>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="border border-gray-300 p-2 bg-gray-100">P</th>
+                            <th class="border border-gray-300 p-2 bg-gray-100">Q</th>
+                            <th class="border border-gray-300 p-2 bg-gray-100">R</th>
+                            <th class="border border-gray-300 p-2 bg-gray-100">S</th>
+                            <th class="border border-gray-300 p-2 bg-gray-100">F</th>
+                            <th class="border border-gray-300 p-2 bg-gray-100">G</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">T</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                            <td class="border border-gray-300 p-2 text-center">F</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="mb-12">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Soal 2 (40 poin)</h2>
+            <div class="mb-4">
+                <p class="mb-2">Membuktikan ekuivalensi:</p>
+                <pre class="bg-gray-100 p-3 rounded font-mono mb-2">F: if (P and Q) then R</pre>
+                <pre class="bg-gray-100 p-3 rounded font-mono">G: if (not R) then (not P or not Q)</pre>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="mb-12">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Soal 3 (30 poin)</h2>
+            <div class="mb-4">
+                <pre
+                    class="bg-gray-100 p-3 rounded font-mono">F : if (not R) then (not P if and only if (R and P))</pre>
+            </div>
+
+            <div class="bg-gray-100 p-4 rounded">
+                <div class="mermaid">
+                    graph TD
+                    A["F: if (not R) then (not P ↔ (R and P))"] --> B["not(not R) or (not P ↔ (R and P))"]
+                    B --> C["R or (not P ↔ (R and P))"]
+                    C --> D["R"]
+                    C --> E["not P ↔ (R and P)"]
+                    E --> F["not P"]
+                    E --> G["R and P"]
+                    G --> H["R"]
+                    G --> I["P"]
+                </div>
+            </div>
+
+            <div class="mt-6">
+                <h3 class="font-bold mb-2">Analisis:</h3>
+                <ul class="list-disc list-inside space-y-2 mb-4">
+                    <li>Jika R bernilai benar, maka F bernilai benar</li>
+                    <li>Jika R bernilai salah, maka ekspresi (not P ↔ (R and P)) akan selalu bernilai benar karena R and
+                        P akan selalu salah ketika R salah</li>
+                </ul>
+                <p class="font-bold">Kesimpulan: Kalimat F adalah sebuah tautologi.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                curve: 'basis'
+            }
+        });
+    </script>
+</body>
+
+</html>
