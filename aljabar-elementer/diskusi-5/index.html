@@ -2,10 +2,10 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sifat-sifat Determinan</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </head>
 
@@ -13,88 +13,149 @@
     <div class="w-full mx-auto px-4 py-8">
         <!-- Header -->
         <div class="mb-8">
-            <h1 class="text-2xl font-bold text-gray-900 mb-4">Sifat-sifat Determinan Matriks</h1>
+            <h1 class="text-3xl font-bold text-gray-900 mb-4">
+                Sifat-sifat Determinan Matriks
+            </h1>
+            <p class="text-gray-600">
+                Berikut adalah sifat-sifat penting determinan matriks yang berlaku untuk matriks persegi dengan ordo
+                berapapun.
+            </p>
         </div>
 
         <!-- Sifat 1 -->
         <div class="mb-12">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">1. Sifat Pertukaran Baris/Kolom</h2>
-            <p class="mb-4">Jika dua baris atau dua kolom matriks dipertukarkan, maka nilai determinannya berubah tanda
-                (dikali -1)</p>
+            <h2 class="text-xl font-bold text-gray-900 mb-4">
+                1. Sifat Pertukaran Baris/Kolom
+            </h2>
+            <p class="mb-4">
+                Jika dua baris atau dua kolom matriks dipertukarkan, maka nilai determinannya berubah tanda (dikali -1).
+            </p>
             <div class="bg-gray-100 p-4 rounded mb-4">
                 <p class="mb-2">Contoh:</p>
-                \[
-                \text{det} \begin{vmatrix} 1 & 2 \\ 3 & 4 \end{vmatrix} = (1 \times 4) - (2 \times 3) = 4 - 6 = -2
-                \]
+                <p class="mb-2">Matriks awal:</p>
+                \[ \text{det} \begin{vmatrix} 2 & 1 \\ 3 & 4 \end{vmatrix} = (2 \times 4) - (1 \times 3) = 8 - 3 = 5 \]
                 <p class="mt-4">Setelah pertukaran baris:</p>
-                \[
-                \text{det} \begin{vmatrix} 3 & 4 \\ 1 & 2 \end{vmatrix} = (3 \times 2) - (4 \times 1) = 6 - 4 = 2
-                \]
+                \[ \text{det} \begin{vmatrix} 3 & 4 \\ 2 & 1 \end{vmatrix} = (3 \times 1) - (4 \times 2) = 3 - 8 = -5 \]
             </div>
         </div>
 
         <!-- Sifat 2 -->
         <div class="mb-12">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">2. Sifat Perkalian dengan Skalar</h2>
-            <p class="mb-4">Jika suatu baris/kolom dikalikan dengan suatu bilangan k, maka determinannya juga dikalikan
-                dengan k</p>
+            <h2 class="text-xl font-bold text-gray-900 mb-4">
+                2. Sifat Perkalian dengan Skalar
+            </h2>
+            <p class="mb-4">
+                Jika suatu baris/kolom dikalikan dengan suatu bilangan k, maka determinannya juga dikalikan dengan k.
+            </p>
             <div class="bg-gray-100 p-4 rounded mb-4">
                 <p class="mb-2">Contoh:</p>
-                \[
-                \text{det} \begin{vmatrix} 2 & 4 \\ 3 & 6 \end{vmatrix} = (2 \times 6) - (4 \times 3) = 12 - 12 = 0
-                \]
-                <p class="mt-4">Jika baris pertama dikalikan 2:</p>
-                \[
-                \text{det} \begin{vmatrix} 4 & 8 \\ 3 & 6 \end{vmatrix} = (4 \times 6) - (8 \times 3) = 24 - 24 = 0
-                \]
+                <p class="mb-2">Matriks awal:</p>
+                \[ \text{det} \begin{vmatrix} 2 & 1 \\ 3 & 4 \end{vmatrix} = (2 \times 4) - (1 \times 3) = 5 \]
+                <p class="mt-4">Setelah baris pertama dikalikan 2:</p>
+                \[ \text{det} \begin{vmatrix} 4 & 2 \\ 3 & 4 \end{vmatrix} = (4 \times 4) - (2 \times 3) = 16 - 6 = 10 =
+                2 \times 5 \]
             </div>
         </div>
 
         <!-- Sifat 3 -->
         <div class="mb-12">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">3. Sifat Penjumlahan Baris/Kolom</h2>
-            <p class="mb-4">Jika suatu baris/kolom merupakan jumlah dari dua vektor, maka determinannya sama dengan
-                jumlah determinan-determinan yang bersesuaian</p>
+            <h2 class="text-xl font-bold text-gray-900 mb-4">
+                3. Sifat Penjumlahan Baris/Kolom
+            </h2>
+            <p class="mb-4">
+                Jika suatu baris/kolom merupakan jumlah dari dua vektor, maka determinannya sama dengan jumlah
+                determinan-determinan yang bersesuaian.
+            </p>
             <div class="bg-gray-100 p-4 rounded mb-4">
                 <p class="mb-2">Contoh:</p>
-                \[
-                \text{det} \begin{vmatrix} a+p & b+q \\ r & s \end{vmatrix} =
-                \text{det} \begin{vmatrix} a & b \\ r & s \end{vmatrix} +
-                \text{det} \begin{vmatrix} p & q \\ r & s \end{vmatrix}
-                \]
+                \[ \text{det} \begin{vmatrix} a+p & b+q \\ r & s \end{vmatrix} = \text{det} \begin{vmatrix} a & b \\ r &
+                s \end{vmatrix} + \text{det} \begin{vmatrix} p & q \\ r & s \end{vmatrix} \]
+                <p class="mt-4">Misalkan dengan angka:</p>
+                \[ \text{det} \begin{vmatrix} 3+2 & 1+1 \\ 2 & 3 \end{vmatrix} = \text{det} \begin{vmatrix} 3 & 1 \\ 2 &
+                3 \end{vmatrix} + \text{det} \begin{vmatrix} 2 & 1 \\ 2 & 3 \end{vmatrix} \]
             </div>
         </div>
 
         <!-- Sifat 4 -->
         <div class="mb-12">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">4. Sifat Baris/Kolom Nol</h2>
-            <p class="mb-4">Jika suatu matriks memiliki satu baris atau satu kolom yang semua elemennya nol, maka
-                determinan matriks tersebut sama dengan nol</p>
+            <h2 class="text-xl font-bold text-gray-900 mb-4">
+                4. Sifat Baris/Kolom Nol
+            </h2>
+            <p class="mb-4">
+                Jika suatu matriks memiliki satu baris atau satu kolom yang semua elemennya nol, maka determinan matriks
+                tersebut sama dengan nol.
+            </p>
             <div class="bg-gray-100 p-4 rounded mb-4">
                 <p class="mb-2">Contoh:</p>
-                \[
-                \text{det} \begin{vmatrix} 0 & 0 \\ 3 & 4 \end{vmatrix} = (0 \times 4) - (0 \times 3) = 0
-                \]
+                \[ \text{det} \begin{vmatrix} 0 & 0 \\ 3 & 4 \end{vmatrix} = (0 \times 4) - (0 \times 3) = 0 \]
+                <p class="mt-2">Hal ini berlaku untuk matriks dengan ordo berapapun.</p>
             </div>
         </div>
 
         <!-- Sifat 5 -->
         <div class="mb-12">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">5. Sifat Baris/Kolom yang Sama</h2>
-            <p class="mb-4">Jika suatu matriks memiliki dua baris atau dua kolom yang sama, maka determinannya sama
-                dengan nol</p>
+            <h2 class="text-xl font-bold text-gray-900 mb-4">
+                5. Sifat Baris/Kolom yang Sama
+            </h2>
+            <p class="mb-4">
+                Jika suatu matriks memiliki dua baris atau dua kolom yang sama (identik), maka determinannya sama dengan
+                nol.
+            </p>
             <div class="bg-gray-100 p-4 rounded mb-4">
                 <p class="mb-2">Contoh:</p>
-                \[
-                \text{det} \begin{vmatrix} 2 & 3 \\ 2 & 3 \end{vmatrix} = (2 \times 3) - (3 \times 2) = 6 - 6 = 0
-                \]
+                \[ \text{det} \begin{vmatrix} 2 & 3 \\ 2 & 3 \end{vmatrix} = (2 \times 3) - (3 \times 2) = 6 - 6 = 0 \]
             </div>
         </div>
 
         <!-- Sifat 6 -->
         <div class="mb-12">
             <h2 class="text-xl font-bold text-gray-900 mb-4">6. Sifat Transpos</h2>
-            <p class="mb-4">Determinan suatu matriks sama dengan determinan matriks transpos...</p>
+            <p class="mb-4">
+                Determinan suatu matriks sama dengan determinan matriks transposnya.
+                \[ \text{det}(A) = \text{det}(A^T) \]
+            </p>
+            <div class="bg-gray-100 p-4 rounded mb-4">
+                <p class="mb-2">Contoh:</p>
+                <p class="mb-2">Matriks A:</p>
+                \[ \text{det} \begin{vmatrix} 2 & 1 \\ 3 & 4 \end{vmatrix} = (2 \times 4) - (1 \times 3) = 5 \]
+                <p class="mt-4">Matriks transpose A^T:</p>
+                \[ \text{det} \begin{vmatrix} 2 & 3 \\ 1 & 4 \end{vmatrix} = (2 \times 4) - (3 \times 1) = 5 \]
+            </div>
+        </div>
+
+        <!-- Sifat 7 -->
+        <div class="mb-12">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">7. Sifat Perkalian Determinan</h2>
+            <p class="mb-4">
+                Determinan hasil perkalian dua matriks sama dengan hasil perkalian determinan kedua matriks tersebut.
+                \[ \text{det}(AB) = \text{det}(A) \times \text{det}(B) \]
+            </p>
+            <div class="bg-gray-100 p-4 rounded mb-4">
+                <p class="mb-2">Contoh untuk matriks 2×2:</p>
+                \[ A = \begin{vmatrix} 2 & 1 \\ 3 & 4 \end{vmatrix}, B = \begin{vmatrix} 1 & 2 \\ 2 & 1 \end{vmatrix} \]
+                \[ \text{det}(A) = 5, \text{det}(B) = -3 \]
+                \[ \text{det}(AB) = \text{det}(A) \times \text{det}(B) = 5 \times (-3) = -15 \]
+            </div>
+        </div>
+
+        <!-- Sifat 8 -->
+        <div class="mb-12">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">8. Sifat Matriks Segitiga</h2>
+            <p class="mb-4">
+                Determinan matriks segitiga (atas atau bawah) sama dengan hasil kali elemen-elemen pada diagonal utama.
+            </p>
+            <div class="bg-gray-100 p-4 rounded mb-4">
+                <p class="mb-2">Contoh matriks segitiga atas:</p>
+                \[ \text{det} \begin{vmatrix} 2 & 1 & 3 \\ 0 & 4 & 2 \\ 0 & 0 & 1 \end{vmatrix} = 2 \times 4 \times 1 =
+                8 \]
+                <p class="mt-4">Contoh matriks segitiga bawah:</p>
+                \[ \text{det} \begin{vmatrix} 2 & 0 & 0 \\ 3 & 4 & 0 \\ 1 & 2 & 1 \end{vmatrix} = 2 \times 4 \times 1 =
+                8 \]
+            </div>
+        </div>
+
+        <div class="mt-8 text-gray-600">
+            <p>Catatan: Sifat-sifat di atas berlaku untuk matriks persegi dengan ordo berapapun (2×2, 3×3, dst).</p>
         </div>
     </div>
 </body>
