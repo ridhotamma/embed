@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Aljabar Linear 2</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+
+<body class="bg-white">
+    <div class="w-full mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <div class="text-gray-600">
+                <p>Nama: Ridho Tamma Abdillah Bajili</p>
+                <p>NIM: 053340456</p>
+                <p>UPBJJ: Sistem Informasi</p>
+                <p>Subjek: Tugas Tutorial Ke-2 Aljabar Linear Elementer I (MATA4112)</p>
+            </div>
+        </div>
+
+        <!-- Question 1 -->
+        <div class="mb-12">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">SOAL 1 (45 poin)</h2>
+            <p class="mb-4">Diketahui sistem persamaan linear:</p>
+            <div class="math">
+                \[ \begin{cases} 3x - 3y + 3z = p \\ 2x + y - z = q \\ x - 4y + 4z = r \end{cases} \]
+            </div>
+
+            <h3 class="font-bold mt-6 mb-3">a) SPL tak punya jawab:</h3>
+            <div class="bg-gray-100 p-4 rounded mb-4">
+                <p class="mb-2">Matriks augmented:</p>
+                <div class="math">
+                    \[ \begin{bmatrix} 3 & -3 & 3 & | & p \\ 2 & 1 & -1 & | & q \\ 1 & -4 & 4 & | & r \end{bmatrix} \]
+                </div>
+
+                <p class="mb-2">Eliminasi Gauss:</p>
+                <div class="math">
+                    \[ \rightarrow \begin{bmatrix} 3 & -3 & 3 & | & p \\ 0 & 4 & -4 & | & q-\frac{2}{3}p \\ 0 & -3 & 3 &
+                    | & r-\frac{1}{3}p \end{bmatrix} \]
+                </div>
+
+                <p class="mt-4">SPL tak punya jawab jika rank matriks koefisien < rank matriks augmented. Hal ini
+                        terjadi jika:</p>
+                        <div class="math">\[ q-\frac{2}{3}p = -\frac{3}{4}(r-\frac{1}{3}p) \text{ dan } q \neq
+                            \frac{2}{3}p \]</div>
+                        <p>Yang dapat disederhanakan menjadi:</p>
+                        <div class="math">\[ p - 3q + r = 0 \text{ dan } p \neq 3q \]</div>
+            </div>
+
+            <h3 class="font-bold mt-6 mb-3">b) SPL punya tepat satu jawab:</h3>
+            <div class="bg-gray-100 p-4 rounded">
+                <p>SPL punya tepat satu jawab jika determinan matriks koefisien tidak nol:</p>
+                <div class="math">
+                    \[ \det \begin{bmatrix} 3 & -3 & 3 \\ 2 & 1 & -1 \\ 1 & -4 & 4 \end{bmatrix} \neq 0 \]
+                </div>
+                <p class="mt-4">Menghitung determinan:</p>
+                <div class="math">
+                    \[ \det = 3(4) - (-3)(-1) + 3(4) = 12 + 3 + 12 = 27 \neq 0 \]
+                </div>
+                <p>Karena determinan tidak nol, maka SPL akan memiliki tepat satu jawab untuk semua nilai p, q, r yang
+                    tidak memenuhi kondisi a) dan c).</p>
+            </div>
+
+            <h3 class="font-bold mt-6 mb-3">c) SPL punya lebih dari satu jawab:</h3>
+            <div class="bg-gray-100 p-4 rounded">
+                <p>SPL punya lebih dari satu jawab jika rank matriks koefisien = rank matriks augmented < jumlah
+                        variabel. Hal ini terjadi jika:</p>
+                        <div class="math">\[ p = 3q \text{ dan } r = 2q \]</div>
+                        <p>Dalam kasus ini, sistem akan memiliki tak hingga banyak solusi.</p>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="mb-12">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">SOAL 2 (30 poin)</h2>
+            <p class="mb-4">Menghitung determinan matriks:</p>
+            <div class="bg-gray-100 p-4 rounded mb-4">
+                <p class="font-bold mb-2">a) det A</p>
+                <div class="math">
+                    \[ A = \begin{bmatrix} 1 & 2 & -2 \\ 3 & 4 & 1 \\ 1 & 0 & -5 \end{bmatrix} \]
+                    \[ \det A = 1(4(-5) - 1(0)) - 2(3(-5) - 1(1)) + (-2)(3(0) - 1(4)) \]
+                    \[ = 1(-20 - 0) - 2(-15 - 1) + (-2)(0 - 4) \]
+                    \[ = -20 - 2(-16) + (-2)(-4) \]
+                    \[ = -20 + 32 + 8 = 20 \]
+                </div>
+            </div>
+
+            <div class="bg-gray-100 p-4 rounded mb-4">
+                <p class="font-bold mb-2">b) det B</p>
+                <div class="math">
+                    \[ B = \begin{bmatrix} 2 & 1 & 0 \\ -1 & 1 & 1 \\ 3 & 2 & -1 \end{bmatrix} \]
+                    \[ \det B = 2(1(-1) - 1(2)) - 1(-1(-1) - 3(1)) + 0(-1(2) - 3(1)) \]
+                    \[ = 2(-1 - 2) - 1(1 - 3) + 0(-2 - 3) \]
+                    \[ = 2(-3) - (-2) + 0 \]
+                    \[ = -6 + 2 = -4 \]
+                </div>
+            </div>
+
+            <div class="bg-gray-100 p-4 rounded">
+                <p class="font-bold mb-2">c) det(AB)</p>
+                <div class="math">
+                    \[ \det(AB) = \det A \times \det B = 20 \times (-4) = -80 \]
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="mb-12">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">SOAL 3 (25 poin)</h2>
+            <p class="mb-4">Mencari nilai \( p \) agar \( \det A = \det B \):</p>
+            <div class="bg-gray-100 p-4 rounded">
+                <p>Diberikan matriks \( A \) dan \( B \):</p>
+                <div class="math">
+                    \[ A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & p & 0 \\ p-5 & 0 & 0 \end{bmatrix} \]
+                    \[ B = \begin{bmatrix} 3 & 2 & 1 \\ 0 & 4 & 5 \\ 0 & 0 & (3-p) \end{bmatrix} \]
+                </div>
+
+                <p class="mt-4">Menghitung det A:</p>
+                <div class="math">
+                    \[ \det A = 1(p(0) - 0(0)) - 2(4(0) - (p-5)(3)) + 3(4(0) - (p-5)(p)) \]
+                    \[ = 0 - 2(-3p+15) + 3(-(p^2-5p)) \]
+                    \[ = 6p - 30 - 3p^2 + 15p \]
+                    \[ = -3p^2 + 21p - 30 \]
+                </div>
+
+                <p class="mt-4">Menghitung det B:</p>
+                <div class="math">
+                    \[ \det B = 3 \cdot 4 \cdot (3-p) = 12(3-p) = 36 - 12p \]
+                </div>
+
+                <p class="mt-4">Agar det A = det B:</p>
+                <div class="math">
+                    \[ -3p^2 + 21p - 30 = 36 - 12p \]
+                    \[ -3p^2 + 33p - 66 = 0 \]
+                    \[ -3(p^2 - 11p + 22) = 0 \]
+                    \[ p^2 - 11p + 22 = 0 \]
+                </div>
+
+                <p>Menggunakan rumus kuadrat:</p>
+                <div class="math">
+                    \[ p = \frac{11 \pm \sqrt{121-88}}{2} = \frac{11 \pm \sqrt{33}}{2} \]
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
