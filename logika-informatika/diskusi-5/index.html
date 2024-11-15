@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                displayMath: [['$$','$$'], ['\\[','\\]']],
+                processEscapes: true
+            }
+        });
+    </script>
+</head>
+
+<body class="bg-gray-50 p-6">
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+        <h1 class="text-2xl font-bold text-gray-800 mb-6">Solusi Substitusi Logika</h1>
+
+        <div class="mb-6">
+            <h2 class="text-lg font-semibold text-gray-700 mb-3">Soal:</h2>
+            <div class="bg-blue-50 p-4 rounded-md">
+                <p>Tentukan hasil dari substitusi berikut:</p>
+                $$ \{if (P \land Q) \text{ then } ((Q \lor R) \iff (\neg Q \land S))\} \triangleleft \{(Q \lor R)
+                \leftarrow (P \land R), \neg Q \leftarrow (P \lor Q)\} $$
+            </div>
+        </div>
+
+        <div class="space-y-6">
+            <div class="bg-gray-50 p-4 rounded-md">
+                <h3 class="font-semibold text-gray-700 mb-2">Langkah 1: Identifikasi Substitusi</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>$(Q \lor R)$ akan diganti dengan $(P \land R)$</li>
+                    <li>$\neg Q$ akan diganti dengan $(P \lor Q)$</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-50 p-4 rounded-md">
+                <h3 class="font-semibold text-gray-700 mb-2">Langkah 2: Lakukan Substitusi</h3>
+                <p>Setelah mengganti semua bagian yang sesuai:</p>
+                $$ \{if (P \land Q) \text{ then } ((P \land R) \iff ((P \lor Q) \land S))\} $$
+            </div>
+
+            <div class="bg-gray-50 p-4 rounded-md">
+                <h3 class="font-semibold text-gray-700 mb-2">Langkah 3: Hasil Akhir</h3>
+                <p>Bentuk final setelah substitusi:</p>
+                <div class="mt-2 p-4 bg-green-50 rounded-md">
+                    $$ \{if (P \land Q) \text{ then } ((P \land R) \iff ((P \lor Q) \land S))\} $$
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                displayMath: [['$$','$$'], ['\\[','\\]']],
+                processEscapes: true
+            }
+        });
+    </script>
+</head>
+
+<body class="bg-gray-50 p-6">
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+        <h1 class="text-2xl font-bold text-gray-800 mb-6">Tugas 2 Logika Informatika</h1>
+
+        <!-- Soal 1 -->
+        <div class="mb-8">
+            <div class="bg-blue-100 p-4 rounded-md mb-4">
+                <h2 class="text-lg font-semibold text-gray-800">Soal 1 (30 poin)</h2>
+                <p class="mt-2">Perhatikan kalimat berikut ini:</p>
+                $$ F: if (P \land Q) \text{ then } ((P \land Q) \lor S) $$
+                <p>Apakah kalimat tersebut merupakan kalimat yang bersifat valid? Buktikan dan jelaskan dengan
+                    menggunakan metode Proof by Falsification (PbF)!</p>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="font-semibold text-gray-700">Solusi:</h3>
+
+                <div class="bg-gray-50 p-4 rounded-md">
+                    <p class="font-medium mb-2">Langkah 1: Identifikasi struktur kalimat</p>
+                    <p>Bentuk: If A then B, dimana:</p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li>A = $(P \land Q)$</li>
+                        <li>B = $((P \land Q) \lor S)$</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-md">
+                    <p class="font-medium mb-2">Langkah 2: Asumsi kalimat tidak valid</p>
+                    <p>Untuk PbF, kita asumsikan kalimat bernilai false, artinya:</p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li>A = true</li>
+                        <li>B = false</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-md">
+                    <p class="font-medium mb-2">Langkah 3: Analisis</p>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li>Jika A = true, maka $P \land Q = true$
+                            <ul class="list-disc list-inside ml-6">
+                                <li>P = true</li>
+                                <li>Q = true</li>
+                            </ul>
+                        </li>
+                        <li>Jika B = false, maka $((P \land Q) \lor S) = false$
+                            <ul class="list-disc list-inside ml-6">
+                                <li>$(P \land Q) = false$ dan $S = false$</li>
+                            </ul>
+                        </li>
+                        <li>Terjadi kontradiksi karena:
+                            <ul class="list-disc list-inside ml-6">
+                                <li>Dari (1), $(P \land Q) = true$</li>
+                                <li>Dari (2), $(P \land Q) = false$</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="bg-green-50 p-4 rounded-md">
+                    <p class="font-medium mb-2">Kesimpulan:</p>
+                    <p>Karena terjadi kontradiksi saat diasumsikan kalimat bernilai false, maka kalimat tersebut
+                        terbukti valid.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Soal 2 -->
+        <div class="mb-8">
+            <div class="bg-blue-100 p-4 rounded-md mb-4">
+                <h2 class="text-lg font-semibold text-gray-800">Soal 2 (35 poin)</h2>
+                <p class="mt-2">Buktikan validitas kalimat:</p>
+                $$ if \text{ true then } ((\neg Q \land P) \lor (Q \lor \neg P)) $$
+                <p>dengan menggunakan pohon semantik!</p>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="font-semibold text-gray-700">Solusi:</h3>
+
+                <div class="bg-gray-50 p-4 rounded-md">
+                    <p class="font-medium mb-2">Langkah 1: Negasi kalimat</p>
+                    <p>Untuk membuktikan dengan pohon semantik, kita negasikan kalimat:</p>
+                    $$ \neg(if \text{ true then } ((\neg Q \land P) \lor (Q \lor \neg P))) $$
+                    $$ true \land \neg((\neg Q \land P) \lor (Q \lor \neg P)) $$
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-md">
+                    <p class="font-medium mb-2">Langkah 2: Pohon Semantik</p>
+                    <pre class="mt-2 p-4 bg-gray-100 rounded">
+true
+¬((¬Q ∧ P) ∨ (Q ∨ ¬P))
+¬(¬Q ∧ P) ∧ ¬(Q ∨ ¬P)
+(Q ∨ ¬P) ∧ (¬Q ∧ P)
+Q ∨ ¬P
+¬Q ∧ P
+¬Q
+P
+    |         |
+    Q        ¬P
+    ×         ×
+    </pre>
+                </div>
+
+                <div class="bg-green-50 p-4 rounded-md">
+                    <p class="font-medium mb-2">Kesimpulan:</p>
+                    <p>Semua cabang pohon semantik tertutup (×), menunjukkan kontradiksi. Ini membuktikan bahwa kalimat
+                        awal valid.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Soal 3 -->
+        <div class="mb-8">
+            <div class="bg-blue-100 p-4 rounded-md mb-4">
+                <h2 class="text-lg font-semibold text-gray-800">Soal 3 (35 poin)</h2>
+                <p class="mt-2">Tentukan hasil substitusi berikut ini:</p>
+                $$ \{(if \text{ }Q \text{ then } (R \land S)) \iff \neg(P \land \neg(R \lor S))\} \triangleleft $$
+                $$ \{\neg(R \land S) \leftarrow R, Q \leftarrow (P \lor Q), (P \land R) \leftarrow (Q \lor S)\} $$
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="font-semibold text-gray-700">Solusi:</h3>
+
+                <div class="bg-gray-50 p-4 rounded-md">
+                    <p class="font-medium mb-2">Langkah 1: Identifikasi substitusi</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>$\neg(R \land S)$ diganti dengan $R$</li>
+                        <li>$Q$ diganti dengan $(P \lor Q)$</li>
+                        <li>$(P \land R)$ diganti dengan $(Q \lor S)$</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-md">
+                    <p class="font-medium mb-2">Langkah 2: Lakukan substitusi</p>
+                    <p>Substitusi secara berurutan:</p>
+                    $$ \{(if \text{ }(P \lor Q) \text{ then } (R \land S)) \iff \neg((Q \lor S) \land \neg(R \lor S))\}
+                    $$
+                </div>
+
+                <div class="bg-green-50 p-4 rounded-md">
+                    <p class="font-medium mb-2">Hasil Akhir:</p>
+                    $$ \{(if \text{ }(P \lor Q) \text{ then } (R \land S)) \iff \neg((Q \lor S) \land \neg(R \lor S))\}
+                    $$
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
