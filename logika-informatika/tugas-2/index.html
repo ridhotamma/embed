@@ -105,33 +105,28 @@
                     <p class="font-medium mb-2">Langkah 2: Pohon Semantik</p>
                     <div class="mermaid">
                         graph TD
-                        A["true"]
-                        B["¬((¬Q ∧ P) ∨ (Q ∨ ¬P))"]
-                        C["¬(¬Q ∧ P) ∧ ¬(Q ∨ ¬P)"]
-                        D["(Q ∨ ¬P) ∧ (¬Q ∧ P)"]
-                        E["Q ∨ ¬P"]
-                        F["¬Q ∧ P"]
-                        G["¬Q"]
-                        H["P"]
-                        I["Q"]
-                        J["¬P"]
-                        K["×"]
-                        L["×"]
+                        A["true ∧ ¬((¬Q ∧ P) ∨ (Q ∨ ¬P))"]
+                        B["¬(¬Q ∧ P) ∧ ¬(Q ∨ ¬P)"]
+                        C1["P=true, Q=true"]
+                        C2["P=true, Q=false"]
+                        C3["P=false, Q=true"]
+                        C4["P=false, Q=false"]
 
                         A --> B
-                        B --> C
-                        C --> D
-                        D --> E
-                        D --> F
-                        F --> G
-                        F --> H
-                        E --> I
-                        E --> J
-                        I --> K
-                        J --> L
+                        B --> C1
+                        B --> C2
+                        B --> C3
+                        B --> C4
 
-                        style K fill:#f88,stroke:#f66
-                        style L fill:#f88,stroke:#f66
+                        C1 --> D1["×"]
+                        C2 --> D2["×"]
+                        C3 --> D3["×"]
+                        C4 --> D4["×"]
+
+                        style D1 fill:#f88,stroke:#f66
+                        style D2 fill:#f88,stroke:#f66
+                        style D3 fill:#f88,stroke:#f66
+                        style D4 fill:#f88,stroke:#f66
                     </div>
                 </div>
 
