@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vector Problems Solution</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+
+</head>
+
+<body class="bg-gray-100 p-8">
+    <div class="mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Solusi Soal Vektor</h1>
+
+        <!-- Problem 1 -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Soal 1: u + v - w</h2>
+            <div class="space-y-2">
+                <p>Diketahui:</p>
+                <ul class="list-disc ml-6">
+                    <li>u = (1,2,3)</li>
+                    <li>v = (2,-3,1)</li>
+                    <li>w = (0,-3,5)</li>
+                </ul>
+
+                <div class="mt-4">
+                    <p class="font-semibold">Langkah penyelesaian:</p>
+                    <ol class="list-decimal ml-6">
+                        <li>u + v = (1+2, 2+(-3), 3+1) = (3, -1, 4)</li>
+                        <li>(u + v) - w = (3, -1, 4) - (0, -3, 5)</li>
+                        <li>Hasil akhir = (3-0, -1-(-3), 4-5) = (3, 2, -1)</li>
+                    </ol>
+                </div>
+
+                <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                    <p class="font-semibold">Jawaban: C. (3,2,-1)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 2 -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">
+                Soal 2: Kombinasi Linear u = (0,1,0)
+            </h2>
+            <div class="space-y-2">
+                <p>Diketahui: A = {(1,0,1), (0,2,0)}</p>
+
+                <div class="mt-4">
+                    <p class="font-semibold">Langkah penyelesaian:</p>
+                    <ol class="list-decimal ml-6">
+                        <li>Misalkan u = a(1,0,1) + b(0,2,0)</li>
+                        <li>Maka: (0,1,0) = (a, 2b, a)</li>
+                        <li>
+                            Dari persamaan tersebut:
+                            <ul class="list-disc ml-6">
+                                <li>a = 0 (dari x)</li>
+                                <li>2b = 1 (dari y)</li>
+                                <li>a = 0 (dari z)</li>
+                            </ul>
+                        </li>
+                        <li>Diperoleh b = 1/2</li>
+                        <li>
+                            Karena ada solusi (a=0, b=1/2), maka u merupakan kombinasi
+                            linear dari A
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                    <p class="font-semibold">
+                        Jawaban: Ya, vektor u merupakan kombinasi linear dari A
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 3 -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">
+                Soal 3: Kombinasi Linear v = (1,-1,1)
+            </h2>
+            <div class="space-y-2">
+                <p>Diketahui: A = {(1,0,1), (0,2,0)}</p>
+
+                <div class="mt-4">
+                    <p class="font-semibold">Langkah penyelesaian:</p>
+                    <ol class="list-decimal ml-6">
+                        <li>Misalkan v = a(1,0,1) + b(0,2,0)</li>
+                        <li>Maka: (1,-1,1) = (a, 2b, a)</li>
+                        <li>
+                            Dari persamaan tersebut:
+                            <ul class="list-disc ml-6">
+                                <li>a = 1 (dari x)</li>
+                                <li>2b = -1 (dari y)</li>
+                                <li>a = 1 (dari z)</li>
+                            </ul>
+                        </li>
+                        <li>Diperoleh b = -1/2</li>
+                        <li>
+                            Nilai a dan b konsisten, maka v merupakan kombinasi linear dari
+                            A
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                    <p class="font-semibold">
+                        Jawaban: Ya, vektor v merupakan kombinasi linear dari A
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 4 -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">
+                Soal 4: Himpunan K membangun R³
+            </h2>
+            <div class="space-y-2">
+                <p>Diketahui: K = {(1,1,1), (2,2,0), (3,0,0)}</p>
+
+                <div class="mt-4">
+                    <p class="font-semibold">Langkah penyelesaian:</p>
+                    <ol class="list-decimal ml-6">
+                        <li>
+                            Untuk membangun R³, himpunan vektor harus:
+                            <ul class="list-disc ml-6">
+                                <li>Memiliki 3 vektor (syarat perlu)</li>
+                                <li>Ketiga vektor harus bebas linear</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Mari cek determinan matriks yang dibentuk dari vektor-vektor
+                            tersebut:
+                            <div class="mt-2 mb-2">
+                                |1 1 1| |2 2 0| = (1)(2)(0) + (1)(0)(3) + (1)(2)(0) -
+                                (1)(2)(3) - (1)(2)(0) - (1)(0)(0) = -2 |3 0 0|
+                            </div>
+                        </li>
+                        <li>
+                            Karena determinan ≠ 0, maka ketiga vektor bebas linear dan dapat
+                            membangun R³
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                    <p class="font-semibold">Jawaban: A. Benar</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 5 -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">
+                Soal 5: Himpunan L membangun R³
+            </h2>
+            <div class="space-y-2">
+                <p>Diketahui: L = {(2,-1,3), (4,1,2), (8,-1,8)}</p>
+
+                <div class="mt-4">
+                    <p class="font-semibold">Langkah penyelesaian:</p>
+                    <ol class="list-decimal ml-6">
+                        <li>
+                            Untuk membangun R³, kita perlu cek apakah ketiga vektor bebas
+                            linear
+                        </li>
+                        <li>
+                            Mari cek determinan matriks:
+                            <div class="mt-2 mb-2">
+                                |2 -1 3| |4 1 2| = (2)(1)(8) + (-1)(2)(8) + (3)(4)(-1) -
+                                (3)(1)(8) - (2)(2)(-1) - (-1)(4)(8) |8 -1 8|
+                            </div>
+                        </li>
+                        <li>Setelah dihitung, determinan = 0</li>
+                        <li>
+                            Karena determinan = 0, maka ketiga vektor tidak bebas linear
+                        </li>
+                        <li>Oleh karena itu, himpunan L tidak dapat membangun R³</li>
+                    </ol>
+                </div>
+
+                <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                    <p class="font-semibold">Jawaban: B. Salah</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 6 -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">
+                Soal 6: Himpunan U = {x | x = (a,1,0), a ∈ R}
+            </h2>
+            <div class="space-y-2">
+                <div class="mt-4">
+                    <p class="font-semibold">Langkah penyelesaian:</p>
+                    <ol class="list-decimal ml-6">
+                        <li>
+                            Himpunan U berisi semua vektor dengan bentuk (a,1,0) dimana a
+                            adalah bilangan real
+                        </li>
+                        <li>
+                            Ini membentuk garis dalam R³ yang:
+                            <ul class="list-disc ml-6">
+                                <li>Komponen y selalu 1</li>
+                                <li>Komponen z selalu 0</li>
+                                <li>Komponen x bisa berupa bilangan real apapun</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Karena hanya bisa bergerak di satu arah (sepanjang sumbu x), ini
+                            merupakan ruang bagian dari R³
+                        </li>
+                    </ol>
+                </div>
+                <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                    <p class="font-semibold">Jawaban: A. Benar</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 7 -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">
+                Soal 7: Himpunan V = {x | x = (a,2a,-a), a ∈ R}
+            </h2>
+            <div class="space-y-2">
+                <div class="mt-4">
+                    <p class="font-semibold">Langkah penyelesaian:</p>
+                    <ol class="list-decimal ml-6">
+                        <li>Himpunan V berisi vektor-vektor dengan bentuk (a,2a,-a)</li>
+                        <li>Ini dapat ditulis sebagai a(1,2,-1) untuk semua a ∈ R</li>
+                        <li>
+                            Ini membentuk garis lurus yang melalui origin dengan arah vektor
+                            (1,2,-1)
+                        </li>
+                        <li>
+                            Karena hanya bisa bergerak sepanjang satu arah, ini merupakan
+                            ruang bagian dari R³
+                        </li>
+                    </ol>
+                </div>
+                <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                    <p class="font-semibold">Jawaban: A. Benar</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 8 -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">
+                Soal 8: Himpunan V = {x = (x,y,z), x - 2z = 0; x,y,z ∈ R}
+            </h2>
+            <div class="space-y-2">
+                <div class="mt-4">
+                    <p class="font-semibold">Langkah penyelesaian:</p>
+                    <ol class="list-decimal ml-6">
+                        <li>Persamaan x - 2z = 0 dapat ditulis sebagai x = 2z</li>
+                        <li>
+                            Maka setiap vektor dalam V berbentuk (2z,y,z) dimana y,z ∈ R
+                        </li>
+                        <li>
+                            Ini membentuk bidang dalam R³ karena:
+                            <ul class="list-disc ml-6">
+                                <li>y dapat bergerak bebas</li>
+                                <li>z dapat bergerak bebas</li>
+                                <li>x tergantung pada z</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Karena membentuk bidang, ini merupakan ruang bagian dari R³
+                        </li>
+                    </ol>
+                </div>
+                <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                    <p class="font-semibold">Jawaban: A. Benar</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 9 -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">
+                Soal 9: Himpunan W = {x = (x,y,z), x - yz = 0; x,y,z ∈ R}
+            </h2>
+            <div class="space-y-2">
+                <div class="mt-4">
+                    <p class="font-semibold">Langkah penyelesaian:</p>
+                    <ol class="list-decimal ml-6">
+                        <li>
+                            Persamaan x - yz = 0 adalah persamaan non-linear (karena ada
+                            perkalian yz)
+                        </li>
+                        <li>
+                            Untuk menjadi ruang bagian, himpunan harus memenuhi:
+                            <ul class="list-disc ml-6">
+                                <li>Tertutup terhadap penjumlahan</li>
+                                <li>Tertutup terhadap perkalian skalar</li>
+                            </ul>
+                        </li>
+                        <li>Ambil v₁ = (y₁z₁,y₁,z₁) dan v₂ = (y₂z₂,y₂,z₂)</li>
+                        <li>v₁ + v₂ = (y₁z₁+y₂z₂,y₁+y₂,z₁+z₂)</li>
+                        <li>Hasil penjumlahan tidak memenuhi x = yz</li>
+                        <li>
+                            Karena tidak tertutup terhadap penjumlahan, W bukan ruang bagian
+                        </li>
+                    </ol>
+                </div>
+                <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                    <p class="font-semibold">Jawaban: B. Salah</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 10 -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">
+                Soal 10: Himpunan vektor P bebas linear
+            </h2>
+            <div class="space-y-2">
+                <div class="mt-4">
+                    <p class="font-semibold">Langkah penyelesaian:</p>
+                    <ol class="list-decimal ml-6">
+                        <li>
+                            Himpunan P terdiri dari vektor-vektor: v₁ = (1,0,-1), v₂ =
+                            (1,1,0), v₃ = (1,3,1)
+                        </li>
+                        <li>
+                            Untuk mengecek kebebasan linear, kita hitung determinan:
+                            <div class="mt-2 mb-2 font-mono">
+                                |1 1 1| |0 1 3| = 1(1)(1) + 1(3)(-1) + 1(0)(1) - 1(1)(1) -
+                                1(3)(1) - 1(0)(-1) = 1 - 3 + 0 - 1 - 3 + 0 = -6 |-1 0 1|
+                            </div>
+                        </li>
+                        <li>Karena determinan ≠ 0, ketiga vektor bebas linear</li>
+                    </ol>
+                </div>
+                <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                    <p class="font-semibold">Jawaban: A. Benar</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 11 -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">
+                Soal 11: Himpunan vektor Q bebas linear
+            </h2>
+            <div class="space-y-2">
+                <div class="mt-4">
+                    <p class="font-semibold">Langkah penyelesaian:</p>
+                    <ol class="list-decimal ml-6">
+                        <li>
+                            Himpunan Q terdiri dari vektor-vektor: v₁ = (1,0,-2), v₂ =
+                            (1,1,-2), v₃ = (-2,3,4)
+                        </li>
+                        <li>
+                            Hitung determinan:
+                            <div class="mt-2 mb-2 font-mono">
+                                |1 1 -2| |0 1 3| = 1(1)(4) + 1(3)(-2) + (-2)(0)(1) -
+                                (-2)(1)(3) - 1(3)(1) - 1(0)(-2) = 4 - 6 + 0 + 6 - 3 + 0 = 1
+                                |-2 -2 4|
+                            </div>
+                        </li>
+                        <li>Karena determinan ≠ 0, ketiga vektor bebas linear</li>
+                    </ol>
+                </div>
+                <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                    <p class="font-semibold">Jawaban: A. Benar</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 12 -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">
+                Soal 12: B = {u,v,w} ⊂ R³ bebas linear, buktikan {u-v+w, -u+w} ⊂ R³
+                juga bebas linear
+            </h2>
+            <div class="space-y-2">
+                <div class="mt-4">
+                    <p class="font-semibold">Langkah penyelesaian:</p>
+                    <ol class="list-decimal ml-6">
+                        <li>Misalkan a(u-v+w) + b(-u+w) = 0</li>
+                        <li>
+                            Kelompokkan koefisien:
+                            <ul class="list-disc ml-6">
+                                <li>u: (a-b)</li>
+                                <li>v: (-a)</li>
+                                <li>w: (a+b)</li>
+                            </ul>
+                        </li>
+                        <li>(a-b)u + (-a)v + (a+b)w = 0</li>
+                        <li>
+                            Karena {u,v,w} bebas linear, maka:
+                            <ul class="list-disc ml-6">
+                                <li>a-b = 0</li>
+                                <li>-a = 0</li>
+                                <li>a+b = 0</li>
+                            </ul>
+                        </li>
+                        <li>Dari sistem persamaan ini, diperoleh a = 0 dan b = 0</li>
+                        <li>
+                            Karena hanya ada solusi trivial, {u-v+w, -u+w} bebas linear
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 13 -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">
+                Soal 13: Tunjukkan bahwa P basis di R³
+            </h2>
+            <div class="space-y-2">
+                <div class="mt-4">
+                    <p class="font-semibold">Langkah penyelesaian:</p>
+                    <ol class="list-decimal ml-6">
+                        <li>
+                            Untuk menjadi basis di R³, himpunan P harus:
+                            <ul class="list-disc ml-6">
+                                <li>Memiliki 3 vektor</li>
+                                <li>Vektor-vektor tersebut bebas linear</li>
+                                <li>Merentang R³</li>
+                            </ul>
+                        </li>
+                        <li>
+                            P memiliki 3 vektor: v₁ = (1,0,-1), v₂ = (1,1,0), v₃ = (1,3,1)
+                        </li>
+                        <li>
+                            Hitung determinan untuk kebebasan linear:
+                            <div class="mt-2 mb-2 font-mono">
+                                |1 1 1| |0 1 3| = -6 ≠ 0 |-1 0 1|
+                            </div>
+                        </li>
+                        <li>
+                            Karena det ≠ 0:
+                            <ul class="list-disc ml-6">
+                                <li>Vektor-vektor bebas linear</li>
+                                <li>Merentang R³</li>
+                            </ul>
+                        </li>
+                        <li>Karena memenuhi semua syarat, P adalah basis untuk R³</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk menghitung determinan 3x3
+        function determinant3x3(matrix) {
+            return (
+                matrix[0][0] *
+                (matrix[1][1] * matrix[2][2] - matrix[1][2] * matrix[2][1]) -
+                matrix[0][1] *
+                (matrix[1][0] * matrix[2][2] - matrix[1][2] * matrix[2][0]) +
+                matrix[0][2] *
+                (matrix[1][0] * matrix[2][1] - matrix[1][1] * matrix[2][0])
+            );
+        }
+
+        // Fungsi untuk memeriksa apakah vektor-vektor bebas linear
+        function isLinearlyIndependent(vectors) {
+            const det = determinant3x3(vectors);
+            return det !== 0;
+        }
+
+        // Event listener untuk toggle detail penyelesaian (bisa ditambahkan jika diperlukan)
+        document.querySelectorAll('.solution-toggle').forEach((button) => {
+            button.addEventListener('click', () => {
+                const solution = button.nextElementSibling;
+                solution.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
