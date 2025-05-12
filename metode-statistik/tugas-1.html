@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1 Metode Statistik</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .solution {
+            background-color: #f8f9fa;
+            border-left: 4px solid #4CAF50;
+            padding: 10px;
+            margin: 15px 0;
+        }
+        .formula {
+            font-style: italic;
+            color: #2980b9;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .probability-table td {
+            min-width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Nama: Ridho Tamma Abdillah Bajili</p>
+        <p>NIM: 053340456</p>
+        <p>Prodi: Sistem Informasi</p>
+    </div>
+    <h2>Soal 1</h2>
+    <p>Pengeluaran untuk konsumsi rumah tangga (dalam ribuan rupiah per hari) dari sampel masing-masing berukuran, n = 10 rumah tangga di Perkotaan dan di Perdesaan adalah sebagai berikut:</p>
+
+    <div style="display: flex; justify-content: space-between;">
+        <table style="width: 48%;">
+            <tr>
+                <th>Rumah Tangga</th>
+                <th>Perkotaan</th>
+            </tr>
+            <tr><td>A</td><td>110</td></tr>
+            <tr><td>B</td><td>102</td></tr>
+            <tr><td>C</td><td>98</td></tr>
+            <tr><td>D</td><td>107</td></tr>
+            <tr><td>E</td><td>120</td></tr>
+            <tr><td>F</td><td>125</td></tr>
+            <tr><td>G</td><td>115</td></tr>
+            <tr><td>H</td><td>95</td></tr>
+            <tr><td>I</td><td>122</td></tr>
+            <tr><td>J</td><td>112</td></tr>
+        </table>
+
+        <table style="width: 48%;">
+            <tr>
+                <th>Rumah Tangga</th>
+                <th>Perdesaan</th>
+            </tr>
+            <tr><td>P</td><td>54</td></tr>
+            <tr><td>Q</td><td>45</td></tr>
+            <tr><td>R</td><td>60</td></tr>
+            <tr><td>S</td><td>55</td></tr>
+            <tr><td>T</td><td>75</td></tr>
+            <tr><td>U</td><td>72</td></tr>
+            <tr><td>V</td><td>62</td></tr>
+            <tr><td>W</td><td>65</td></tr>
+            <tr><td>X</td><td>85</td></tr>
+            <tr><td>Y</td><td>35</td></tr>
+        </table>
+    </div>
+
+    <p>Menurut Anda, apakah dapat disimpulkan bahwa pengeluaran untuk konsumsi rumah tangga di Perkotaan lebih merata dibandingkan di Perdesaan? Jelaskan jawaban Anda berdasarkan nilai-nilai statistik dari informasi pengeluaran untuk konsumsi rumah tangga tersebut!</p>
+
+    <div class="solution">
+        <h3>Solusi:</h3>
+        <p>Untuk membandingkan kerataan pengeluaran, kita perlu menghitung ukuran pemusatan dan penyebaran data:</p>
+        
+        <h4>1. Data Perkotaan:</h4>
+        <p>Data: 110, 102, 98, 107, 120, 125, 115, 95, 122, 112</p>
+        <p>Mean (rata-rata) = (110 + 102 + 98 + 107 + 120 + 125 + 115 + 95 + 122 + 112) / 10 = 1106 / 10 = <span class="highlight">110.6</span></p>
+        
+        <p>Menghitung variansi:</p>
+        <ul>
+            <li>(110 - 110.6)² = 0.36</li>
+            <li>(102 - 110.6)² = 74.56</li>
+            <li>(98 - 110.6)² = 158.76</li>
+            <li>(107 - 110.6)² = 12.96</li>
+            <li>(120 - 110.6)² = 88.36</li>
+            <li>(125 - 110.6)² = 207.36</li>
+            <li>(115 - 110.6)² = 19.36</li>
+            <li>(95 - 110.6)² = 243.36</li>
+            <li>(122 - 110.6)² = 129.96</li>
+            <li>(112 - 110.6)² = 1.96</li>
+        </ul>
+        
+        <p>Variansi = (0.36 + 74.56 + 158.76 + 12.96 + 88.36 + 207.36 + 19.36 + 243.36 + 129.96 + 1.96) / 10 = 937 / 10 = <span class="highlight">93.7</span></p>
+        <p>Standar deviasi = √93.7 ≈ <span class="highlight">9.68</span></p>
+        <p>Koefisien variasi = (9.68 / 110.6) × 100% ≈ <span class="highlight">8.75%</span></p>
+        
+        <h4>2. Data Perdesaan:</h4>
+        <p>Data: 54, 45, 60, 55, 75, 72, 62, 65, 85, 35</p>
+        <p>Mean (rata-rata) = (54 + 45 + 60 + 55 + 75 + 72 + 62 + 65 + 85 + 35) / 10 = 608 / 10 = <span class="highlight">60.8</span></p>
+        
+        <p>Menghitung variansi:</p>
+        <ul>
+            <li>(54 - 60.8)² = 46.24</li>
+            <li>(45 - 60.8)² = 249.64</li>
+            <li>(60 - 60.8)² = 0.64</li>
+            <li>(55 - 60.8)² = 33.64</li>
+            <li>(75 - 60.8)² = 201.64</li>
+            <li>(72 - 60.8)² = 125.44</li>
+            <li>(62 - 60.8)² = 1.44</li>
+            <li>(65 - 60.8)² = 17.64</li>
+            <li>(85 - 60.8)² = 584.44</li>
+            <li>(35 - 60.8)² = 666.64</li>
+        </ul>
+        
+        <p>Variansi = (46.24 + 249.64 + 0.64 + 33.64 + 201.64 + 125.44 + 1.44 + 17.64 + 584.44 + 666.64) / 10 = 1927.4 / 10 = <span class="highlight">192.74</span></p>
+        <p>Standar deviasi = √192.74 ≈ <span class="highlight">13.88</span></p>
+        <p>Koefisien variasi = (13.88 / 60.8) × 100% ≈ <span class="highlight">22.83%</span></p>
+        
+        <h4>Kesimpulan:</h4>
+        <p>Berdasarkan hasil perhitungan:</p>
+        <ul>
+            <li>Koefisien variasi Perkotaan: 8.75%</li>
+            <li>Koefisien variasi Perdesaan: 22.83%</li>
+        </ul>
+        <p>Koefisien variasi menunjukkan tingkat keragaman data relatif terhadap nilai rata-ratanya. Semakin kecil nilai koefisien variasi, semakin merata data tersebut.</p>
+        <p>Karena koefisien variasi Perkotaan (8.75%) lebih kecil daripada Perdesaan (22.83%), maka dapat disimpulkan bahwa pengeluaran untuk konsumsi rumah tangga di Perkotaan lebih merata dibandingkan di Perdesaan.</p>
+    </div>
+
+    <h2>Soal 2</h2>
+    <p>Diketahui distribusi peluang sebagai berikut:</p>
+    
+    <table class="probability-table">
+        <tr>
+            <th>x</th>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <th>P(X = x)</th>
+            <td>1/36</td>
+            <td>2/36</td>
+            <td>3/36</td>
+            <td>4/36</td>
+            <td>5/36</td>
+            <td>6/36</td>
+            <td>5/36</td>
+            <td>4/36</td>
+            <td>3/36</td>
+            <td>2/36</td>
+            <td>1/36</td>
+        </tr>
+    </table>
+    
+    <p>Tentukan nilai P(X ≤ 7)!</p>
+
+    <div class="solution">
+        <h3>Solusi:</h3>
+        <p>P(X ≤ 7) berarti kita harus menjumlahkan semua peluang untuk nilai X yang kurang dari atau sama dengan 7.</p>
+        <p>P(X ≤ 7) = P(X = 2) + P(X = 3) + P(X = 4) + P(X = 5) + P(X = 6) + P(X = 7)</p>
+        <p>P(X ≤ 7) = 1/36 + 2/36 + 3/36 + 4/36 + 5/36 + 6/36</p>
+        <p>P(X ≤ 7) = 21/36</p>
+        <p>P(X ≤ 7) = 7/12 = <span class="highlight">0.5833</span></p>
+        
+        <p>Jadi, nilai P(X ≤ 7) adalah 7/12 atau 0.5833 atau 58.33%.</p>
+    </div>
+
+    <h2>Soal 3</h2>
+    <p>Di suatu desa terdapat 45 orang terpapar Covid (Corona virus disease) dari virus jenis Alpha, 25 orang terpapar virus jenis Delta, dan 30 orang terpapar virus jenis Omicron. Diketahui saat ini ada 43 orang sembuh dari Covid jenis Alpha, 20 orang sembuh dari Covid jenis Delta, dan 28 orang sembuh dari Covid jenis Omicron. Jika seseorang dipilih secara acak dari penduduk desa ini:</p>
+    
+    <ol type="a">
+        <li>Berapa peluang dia sembuh dari Covid?</li>
+        <li>Berapa peluang yang terpilih orang yang terpapar Covid jenis Delta, jika telah diketahui dia sembuh?</li>
+        <li>Virus jenis apa yang berpeluang besar bagi orang yang terpapar akan sembuh? Jelaskan!</li>
+    </ol>
+
+    <div class="solution">
+        <h3>Solusi:</h3>
+        
+        <p>Informasi dari soal:</p>
+        <ul>
+            <li>Terpapar Alpha: 45 orang</li>
+            <li>Terpapar Delta: 25 orang</li>
+            <li>Terpapar Omicron: 30 orang</li>
+            <li>Total terpapar: 45 + 25 + 30 = 100 orang</li>
+            <li>Sembuh dari Alpha: 43 orang</li>
+            <li>Sembuh dari Delta: 20 orang</li>
+            <li>Sembuh dari Omicron: 28 orang</li>
+            <li>Total sembuh: 43 + 20 + 28 = 91 orang</li>
+        </ul>
+        
+        <h4>a) Berapa peluang dia sembuh dari Covid?</h4>
+        <p>Peluang sembuh dari Covid = Jumlah orang sembuh / Total orang terpapar</p>
+        <p>Peluang sembuh dari Covid = 91 / 100 = <span class="highlight">0.91</span> atau 91%</p>
+        
+        <h4>b) Berapa peluang yang terpilih orang yang terpapar Covid jenis Delta, jika telah diketahui dia sembuh?</h4>
+        <p>Ini adalah soal peluang bersyarat P(Delta | Sembuh)</p>
+        <p>P(Delta | Sembuh) = P(Delta ∩ Sembuh) / P(Sembuh)</p>
+        <p>P(Delta ∩ Sembuh) = Jumlah orang sembuh dari Delta / Total orang terpapar = 20/100 = 0.2</p>
+        <p>P(Sembuh) = 91/100 = 0.91</p>
+        <p>P(Delta | Sembuh) = 0.2 / 0.91 = <span class="highlight">0.2198</span> atau 21.98%</p>
+        
+        <h4>c) Virus jenis apa yang berpeluang besar bagi orang yang terpapar akan sembuh? Jelaskan!</h4>
+        <p>Kita perlu menghitung peluang sembuh untuk masing-masing jenis virus:</p>
+        
+        <p>P(Sembuh | Alpha) = Jumlah orang sembuh dari Alpha / Jumlah orang terpapar Alpha</p>
+        <p>P(Sembuh | Alpha) = 43/45 = <span class="highlight">0.9556</span> atau 95.56%</p>
+        
+        <p>P(Sembuh | Delta) = Jumlah orang sembuh dari Delta / Jumlah orang terpapar Delta</p>
+        <p>P(Sembuh | Delta) = 20/25 = <span class="highlight">0.8</span> atau 80%</p>
+        
+        <p>P(Sembuh | Omicron) = Jumlah orang sembuh dari Omicron / Jumlah orang terpapar Omicron</p>
+        <p>P(Sembuh | Omicron) = 28/30 = <span class="highlight">0.9333</span> atau 93.33%</p>
+        
+        <p>Dari hasil perhitungan di atas, virus jenis Alpha memiliki peluang sembuh tertinggi yaitu 95.56%, diikuti oleh Omicron (93.33%), dan Delta (80%). Jadi, virus jenis Alpha yang berpeluang paling besar bagi orang yang terpapar akan sembuh.</p>
+    </div>
+
+</body>
+</html>
