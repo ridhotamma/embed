@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tugas 2 - Metode Statistik</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ["$", "$"],
+          ["\\(", "\\)"],
+        ],
+        displayMath: [
+          ["$$", "$$"],
+          ["\\[", "\\]"],
+        ],
+        processEscapes: true,
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+      },
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body class="bg-white min-h-screen">
+  <div class="container mx-auto py-8">
+    <div class="border border-gray-300">
+      <!-- Header -->
+      <div class="border-b border-gray-300 p-6">
+        <h1 class="text-2xl font-bold text-center">Tugas 2: Distribusi Peluang</h1>
+        <p class="text-center mt-2">Metode Statistik</p>
+      </div>
+
+      <!-- Student Information -->
+      <div class="p-6 border-b border-gray-300">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <p class="font-semibold">Nama: <span class="font-normal">Ridho Tamma Abdillah Bajili</span></p>
+            <p class="font-semibold">NIM: <span class="font-normal">053340456</span></p>
+            <p class="font-semibold">Prodi: <span class="font-normal">Sistem Informasi</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6">
+        <div class="mb-8">
+          <h2 class="text-xl font-bold mb-4 border-b border-gray-300 pb-2">
+            1. Perbedaan antara Distribusi Peluang Diskret dan Kontinu
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+            <div class="border border-gray-300 p-4">
+              <h3 class="font-bold mb-2">
+                Distribusi Peluang Diskret
+              </h3>
+              <ul class="list-disc pl-5 space-y-2">
+                <li>
+                  Variabel acak hanya dapat mengambil nilai tertentu
+                  (terhitung/countable)
+                </li>
+                <li>
+                  Nilai peluang dinyatakan sebagai titik massa peluang (PMF)
+                </li>
+                <li>
+                  Peluang dihitung dengan menjumlahkan nilai-nilai diskret
+                </li>
+                <li>
+                  Fungsi distribusi kumulatif berbentuk fungsi tangga (step
+                  function)
+                </li>
+              </ul>
+              <p class="mt-3 font-semibold">Contoh:</p>
+              <p>
+                Pelemparan dadu (nilai 1-6), jumlah anak dalam keluarga,
+                jumlah pelanggan dalam antrian
+              </p>
+            </div>
+
+            <div class="border border-gray-300 p-4">
+              <h3 class="font-bold mb-2">
+                Distribusi Peluang Kontinu
+              </h3>
+              <ul class="list-disc pl-5 space-y-2">
+                <li>
+                  Variabel acak dapat mengambil nilai dalam interval kontinu
+                </li>
+                <li>
+                  Nilai peluang dinyatakan sebagai fungsi kepadatan peluang
+                  (PDF)
+                </li>
+                <li>Peluang dihitung dengan integral pada interval</li>
+                <li>Fungsi distribusi kumulatif berbentuk kurva halus</li>
+              </ul>
+              <p class="mt-3 font-semibold">Contoh:</p>
+              <p>Tinggi badan, berat badan, waktu tunggu, suhu udara</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h2 class="text-xl font-bold mb-4 border-b border-gray-300 pb-2">
+            2. Distribusi Peluang Jumlah Bilangan pada Pelemparan Sepasang
+            Dadu
+          </h2>
+
+          <div class="border border-gray-300 p-4 mb-4">
+            <p class="mb-3">
+              Ketika sepasang dadu dilempar, kita mendapatkan distribusi
+              peluang untuk jumlah kedua dadu tersebut.
+            </p>
+
+            <div class="overflow-x-auto">
+              <table class="min-w-full border border-gray-300">
+                <thead>
+                  <tr>
+                    <th class="border border-gray-300 px-4 py-2">Jumlah</th>
+                    <th class="border border-gray-300 px-4 py-2">
+                      Cara Mendapatkan
+                    </th>
+                    <th class="border border-gray-300 px-4 py-2">
+                      Banyak Cara
+                    </th>
+                    <th class="border border-gray-300 px-4 py-2">Peluang</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      2
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2">(1,1)</td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      1
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      1/36
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      3
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2">
+                      (1,2), (2,1)
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      2
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      2/36 = 1/18
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      4
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2">
+                      (1,3), (3,1), (2,2)
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      3
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      3/36 = 1/12
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      5
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2">
+                      (1,4), (4,1), (2,3), (3,2)
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      4
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      4/36 = 1/9
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      6
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2">
+                      (1,5), (5,1), (2,4), (4,2), (3,3)
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      5
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      5/36
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      7
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2">
+                      (1,6), (6,1), (2,5), (5,2), (3,4), (4,3)
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      6
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      6/36 = 1/6
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      8
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2">
+                      (2,6), (6,2), (3,5), (5,3), (4,4)
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      5
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      5/36
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      9
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2">
+                      (3,6), (6,3), (4,5), (5,4)
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      4
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      4/36 = 1/9
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      10
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2">
+                      (4,6), (6,4), (5,5)
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      3
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      3/36 = 1/12
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      11
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2">
+                      (5,6), (6,5)
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      2
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      2/36 = 1/18
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      12
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2">(6,6)</td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      1
+                    </td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">
+                      1/36
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="mt-4 font-semibold">Jawaban:</p>
+            <p>
+              Distribusi peluang jumlah bilangan pada pelemparan sepasang dadu
+              adalah
+              <span class="font-bold">distribusi peluang diskret</span>
+              karena:
+            </p>
+            <ul class="list-disc pl-5 mt-2">
+              <li>
+                Variabel acak (jumlah dadu) hanya dapat mengambil nilai
+                tertentu: 2, 3, 4, ..., 12
+              </li>
+              <li>
+                Jumlah nilai yang mungkin terbatas dan dapat dihitung
+                (countable)
+              </li>
+              <li>
+                Setiap nilai memiliki peluang tertentu yang dapat dihitung
+                secara eksak
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h2 class="text-xl font-bold mb-4 border-b border-gray-300 pb-2">
+            3. Kasus Pengusaha Sepatu
+          </h2>
+
+          <div class="border border-gray-300 p-4 mb-4">
+            <p class="mb-3">
+              Seorang pengusaha sepatu memproduksi 5.000 pasang sepatu dan
+              ternyata 5 pasang sepatu di antaranya tidak memenuhi standar
+              mutu. Pengusaha itu mendapat pesanan sebanyak 8.000 pasang
+              sepatu dari Mr.X yang akan menjualnya kembali.
+            </p>
+
+            <div class="border border-gray-300 p-4 mb-4">
+              <p class="font-semibold">Informasi yang diketahui:</p>
+              <ul class="list-disc pl-5 mt-2">
+                <li>Total produksi: 5.000 pasang sepatu</li>
+                <li>Jumlah sepatu tidak memenuhi standar: 5 pasang</li>
+                <li>Pesanan dari Mr. X: 8.000 pasang</li>
+              </ul>
+            </div>
+
+            <p class="font-semibold text-blue-700 mt-4">
+              Kasus ini mengikuti distribusi Hipergeometrik karena:
+            </p>
+            <ul class="list-disc pl-5 mt-2">
+              <li>Pengambilan sampel dilakukan tanpa pengembalian</li>
+              <li>Populasi terbatas (5.000 pasang sepatu)</li>
+              <li>
+                Kita mencari peluang mendapatkan sepatu cacat dari sampel yang
+                diambil
+              </li>
+            </ul>
+
+            <p class="mt-4">
+              Karena pesanan (8.000) lebih besar dari produksi (5.000), maka
+              semua sepatu yang diproduksi akan dikirim ke Mr. X. Oleh karena
+              itu:
+            </p>
+
+            <div class="mt-4">
+              <p class="font-semibold">
+                (a) Peluang Mr. X mendapat paling banyak 5 pasang sepatu yang
+                tidak memenuhi standar mutu:
+              </p>
+              <p class="mt-2">
+                Karena semua sepatu dikirim ke Mr. X (5.000 pasang), maka Mr.
+                X pasti mendapatkan semua 5 pasang sepatu yang tidak memenuhi
+                standar mutu.
+              </p>
+              <p class="mt-2">
+                Jadi, peluang Mr. X mendapat paling banyak 5 pasang sepatu
+                yang tidak memenuhi standar mutu adalah
+                <span class="font-bold text-blue-700">1 (kepastian)</span>.
+              </p>
+            </div>
+
+            <div class="mt-4">
+              <p class="font-semibold">
+                (b) Peluang Mr. X mendapat lebih dari 5 pasang sepatu yang
+                tidak memenuhi standar mutu:
+              </p>
+              <p class="mt-2">
+                Karena hanya ada 5 pasang sepatu yang tidak memenuhi standar
+                mutu dalam produksi, maka tidak mungkin Mr. X mendapatkan
+                lebih dari 5 pasang sepatu yang tidak memenuhi standar mutu.
+              </p>
+              <p class="mt-2">
+                Jadi, peluang Mr. X mendapat lebih dari 5 pasang sepatu yang
+                tidak memenuhi standar mutu adalah
+                <span class="font-bold text-blue-700">0 (mustahil)</span>.
+              </p>
+            </div>
+
+            <div class="mt-4">
+              <p class="font-semibold">
+                (c) Rata-rata dan simpangan baku dari sepatu yang tidak
+                memenuhi standar mutu yang diperoleh Mr. X:
+              </p>
+              <p class="mt-2">
+                Karena Mr. X pasti mendapatkan semua 5 pasang sepatu yang
+                tidak memenuhi standar mutu:
+              </p>
+              <ul class="list-disc pl-5 mt-2">
+                <li>Rata-rata (μ) = 5 pasang</li>
+                <li>
+                  Simpangan baku (σ) = 0 (karena tidak ada variasi, nilai
+                  selalu 5)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h2 class="text-xl font-bold mb-4 border-b border-gray-300 pb-2">
+            4. Ujian Kompetensi Dasar
+          </h2>
+
+          <div class="border border-gray-300 p-4 mb-4">
+            <p class="mb-3">
+              Dalam soal Ujian Kompetensi Dasar terdiri atas 300 pertanyaan
+              pilihan ganda. Masing-masing pertanyaan terdapat 4 kemungkinan
+              jawaban. Namun, hanya ada satu jawaban yang benar. Bila
+              seseorang menjawab secara acak 120 di antara 300 soal yang sama
+              sekali tidak diketahuinya.
+            </p>
+
+            <div class="border border-gray-300 p-4 mb-4">
+              <p class="font-semibold">Informasi yang diketahui:</p>
+              <ul class="list-disc pl-5 mt-2">
+                <li>Total soal: 300 pertanyaan pilihan ganda</li>
+                <li>Setiap soal memiliki 4 pilihan jawaban</li>
+                <li>Hanya 1 jawaban benar per soal</li>
+                <li>Seseorang menjawab secara acak 120 soal</li>
+              </ul>
+            </div>
+
+            <p class="font-semibold text-blue-700 mt-4">
+              Peluang mendapatkan jawaban benar untuk satu soal yang dijawab
+              acak:
+            </p>
+            <p>p = 1/4 = 0.25</p>
+
+            <p class="font-semibold text-blue-700 mt-4">
+              Peluang mendapatkan jawaban salah untuk satu soal yang dijawab
+              acak:
+            </p>
+            <p>q = 1 - p = 1 - 0.25 = 0.75</p>
+
+            <p class="font-semibold text-blue-700 mt-4">
+              Kasus ini mengikuti distribusi Binomial karena:
+            </p>
+            <ul class="list-disc pl-5 mt-2">
+              <li>
+                Setiap soal memiliki dua kemungkinan hasil: benar atau salah
+              </li>
+              <li>Jumlah percobaan tetap: 120 soal</li>
+              <li>Setiap percobaan independen</li>
+              <li>Peluang sukses konstan: p = 0.25</li>
+            </ul>
+
+            <p class="font-semibold text-blue-700 mt-4">
+              Peluang mendapatkan 70 sampai 90 jawaban benar:
+            </p>
+
+            <p class="mt-2">
+              Untuk menghitung peluang mendapatkan antara 70 sampai 90 jawaban
+              benar dari 120 soal yang dijawab secara acak, kita perlu
+              menghitung:
+            </p>
+            <p class="mt-2 font-semibold">
+              P(70 ≤ X ≤ 90) = P(X = 70) + P(X = 71) + ... + P(X = 90)
+            </p>
+
+            <p class="mt-2">Menggunakan rumus distribusi binomial:</p>
+            <p class="mt-2">
+              P(X = k) = \(C(n,k) \times p^k \times (1-p)^{n-k}\)
+            </p>
+            <p class="mt-2">Dimana:</p>
+            <ul class="list-disc pl-5 mt-2">
+              <li>n = 120 (jumlah soal yang dijawab acak)</li>
+              <li>k = jumlah jawaban benar (70 sampai 90)</li>
+              <li>p = 0.25 (peluang menjawab benar)</li>
+            </ul>
+
+            <p class="mt-4 font-semibold">Perhitungan:</p>
+            <p class="mt-2">
+              Nilai harapan (rata-rata) jawaban benar = n × p = 120 × 0.25 =
+              30 jawaban benar
+            </p>
+            <p class="mt-2">
+              Standar deviasi = \(\sqrt{n \times p \times (1-p)} = \sqrt{120
+              \times 0.25 \times 0.75} = \sqrt{22.5} \approx 4.74\)
+            </p>
+
+            <p class="mt-4">
+              Mendapatkan 70-90 jawaban benar sangat jauh dari nilai harapan
+              (30), yaitu sekitar 8-12 standar deviasi dari rata-rata.
+            </p>
+
+            <p class="mt-4 font-bold text-red-600">
+              Peluang mendapatkan 70 sampai 90 jawaban benar dari 120 soal
+              yang dijawab secara acak adalah sangat kecil, hampir 0 (praktis
+              tidak mungkin).
+            </p>
+
+            <p class="mt-4 font-semibold">Langkah-langkah pengerjaan:</p>
+            <ol class="list-decimal pl-5 mt-2 space-y-2">
+              <li>Identifikasi distribusi peluang yang sesuai (Binomial)</li>
+              <li>Tentukan parameter distribusi (n=120, p=0.25)</li>
+              <li>
+                Hitung nilai harapan (μ = n×p = 30) dan standar deviasi (σ =
+                4.74)
+              </li>
+              <li>
+                Untuk perhitungan eksak, gunakan rumus distribusi binomial
+                untuk setiap nilai k dari 70 sampai 90 dan jumlahkan
+              </li>
+              <li>
+                Untuk pendekatan, gunakan pendekatan normal dengan koreksi
+                kontinuitas
+              </li>
+              <li>
+                Evaluasi hasil: nilai 70-90 sangat jauh dari nilai harapan 30,
+                sehingga peluangnya sangat kecil
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
