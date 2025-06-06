@@ -50,113 +50,11 @@
       <div class="p-6">
         <div class="mb-8">
           <h2 class="text-xl font-bold mb-4 border-b border-gray-300 pb-2">
-            1. Pengertian dan Konsep Teorema Limit Pusat (Central Limit Theorem)
-          </h2>
-
-          <div class="mb-4">
-            <p class="mb-2">
-              Teorema Limit Pusat (Central Limit Theorem) adalah salah satu konsep terpenting dalam statistika. 
-              Teorema ini menyatakan bahwa jika kita memiliki sampel yang cukup besar dari populasi mana pun 
-              (terlepas dari bentuk distribusi populasi aslinya), maka distribusi rata-rata sampel akan mendekati 
-              distribusi normal.
-            </p>
-            
-            <p class="mb-2">
-              <span class="font-semibold">Pernyataan formal:</span> Jika $X_1, X_2, ..., X_n$ adalah variabel acak 
-              independen dan identik dengan rata-rata $\mu$ dan varians $\sigma^2$ yang terbatas, maka distribusi
-              dari $\bar{X} = \frac{1}{n}\sum_{i=1}^{n}X_i$ akan mendekati distribusi normal $N(\mu, \frac{\sigma^2}{n})$ 
-              saat $n$ mendekati tak hingga.
-            </p>
-
-            <div class="bg-gray-100 p-4 rounded-md my-4">
-              <p class="font-semibold">Implikasi penting:</p>
-              <ul class="list-disc pl-5 space-y-1">
-                <li>Rata-rata sampel ($\bar{X}$) akan terdistribusi secara normal untuk ukuran sampel yang cukup besar (biasanya n ≥ 30).</li>
-                <li>Rata-rata dari distribusi sampling akan sama dengan rata-rata populasi ($\mu_{\bar{X}} = \mu$).</li>
-                <li>Standar deviasi dari distribusi sampling (juga disebut standard error) adalah $\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}$.</li>
-                <li>Semakin besar ukuran sampel (n), semakin kecil standard error, sehingga rata-rata sampel akan semakin mendekati rata-rata populasi.</li>
-              </ul>
-            </div>
-
-            <p class="mb-2">
-              Hal ini berlaku untuk hampir semua distribusi, termasuk distribusi yang tidak normal sekalipun.
-            </p>
-          </div>
-        </div>
-
-        <div class="mb-8">
-          <h2 class="text-xl font-bold mb-4 border-b border-gray-300 pb-2">
-            2. Estimasi Parameter dan Interval Kepercayaan
-          </h2>
-
-          <div class="mb-4">
-            <h3 class="text-lg font-bold mb-2">A. Estimasi Parameter</h3>
-            <p class="mb-2">
-              Estimasi parameter adalah proses menduga parameter populasi berdasarkan data sampel. Ada dua jenis estimasi:
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-              <div class="border border-gray-300 p-4">
-                <h4 class="font-bold mb-2">1. Estimasi Titik (Point Estimation)</h4>
-                <p>Mencoba mengestimasi parameter populasi dengan satu nilai tunggal dari sampel.</p>
-                <p class="mt-2"><span class="font-semibold">Contoh:</span></p>
-                <ul class="list-disc pl-5">
-                  <li>Rata-rata sampel ($\bar{X}$) sebagai estimator untuk rata-rata populasi ($\mu$)</li>
-                  <li>Varians sampel ($s^2$) sebagai estimator untuk varians populasi ($\sigma^2$)</li>
-                  <li>Proporsi sampel ($p$) sebagai estimator untuk proporsi populasi ($P$)</li>
-                </ul>
-              </div>
-
-              <div class="border border-gray-300 p-4">
-                <h4 class="font-bold mb-2">2. Estimasi Interval (Interval Estimation)</h4>
-                <p>Memberikan rentang nilai yang mungkin berisi parameter populasi dengan tingkat kepercayaan tertentu.</p>
-                <p class="mt-2"><span class="font-semibold">Contoh:</span></p>
-                <ul class="list-disc pl-5">
-                  <li>Interval kepercayaan 95% untuk rata-rata populasi</li>
-                  <li>Interval kepercayaan 99% untuk proporsi populasi</li>
-                </ul>
-              </div>
-            </div>
-
-            <h3 class="text-lg font-bold mb-2 mt-4">B. Interval Kepercayaan</h3>
-            <p class="mb-2">
-              Interval kepercayaan adalah rentang nilai yang dengan tingkat kepercayaan tertentu, mengandung parameter populasi yang sebenarnya.
-            </p>
-
-            <div class="bg-gray-100 p-4 rounded-md my-4">
-              <p class="font-semibold mb-2">1. Interval Kepercayaan untuk Rata-rata ($\mu$)</p>
-              <p>Untuk ukuran sampel besar (n ≥ 30) atau populasi yang berdistribusi normal:</p>
-              <p class="text-center my-2">
-                $$\bar{X} \pm z_{\alpha/2} \times \frac{\sigma}{\sqrt{n}}$$
-              </p>
-              <p>Jika $\sigma$ tidak diketahui (yang biasanya terjadi), gunakan $s$:</p>
-              <p class="text-center my-2">
-                $$\bar{X} \pm z_{\alpha/2} \times \frac{s}{\sqrt{n}}$$
-              </p>
-              <p>Untuk ukuran sampel kecil (n < 30) dan populasi berdistribusi normal, gunakan distribusi t:</p>
-              <p class="text-center my-2">
-                $$\bar{X} \pm t_{\alpha/2, n-1} \times \frac{s}{\sqrt{n}}$$
-              </p>
-            </div>
-
-            <div class="bg-gray-100 p-4 rounded-md my-4">
-              <p class="font-semibold mb-2">2. Interval Kepercayaan untuk Proporsi ($p$)</p>
-              <p>Untuk ukuran sampel besar (n ≥ 30):</p>
-              <p class="text-center my-2">
-                $$\hat{p} \pm z_{\alpha/2} \times \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$$
-              </p>
-              <p>di mana $\hat{p}$ adalah proporsi sampel.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mb-8">
-          <h2 class="text-xl font-bold mb-4 border-b border-gray-300 pb-2">
-            3. Soal dan Pembahasan
+            Penyelesaian Soal
           </h2>
 
           <div class="mb-6">
-            <h3 class="text-lg font-bold mb-2">Soal 1: Teorema Limit Pusat</h3>
+            <h3 class="text-lg font-bold mb-2">Soal 1</h3>
             <p class="mb-2">
               Sebuah mesin produksi menghasilkan komponen elektronik dengan berat yang berdistribusi dengan mean 50 gram dan standar deviasi 5 gram. Jika diambil sampel sebanyak 36 komponen, berapakah probabilitas bahwa rata-rata berat sampel berada antara 48,5 gram dan 51,5 gram?
             </p>
@@ -195,7 +93,7 @@
           </div>
 
           <div class="mb-6">
-            <h3 class="text-lg font-bold mb-2">Soal 2: Interval Kepercayaan</h3>
+            <h3 class="text-lg font-bold mb-2">Soal 2</h3>
             <p class="mb-2">
               Sebuah penelitian mengukur kadar gula darah pada 100 pasien diabetes. Diperoleh rata-rata kadar gula darah adalah 165 mg/dL dengan standar deviasi 25 mg/dL. Hitunglah interval kepercayaan 95% untuk rata-rata kadar gula darah populasi.
             </p>
@@ -226,7 +124,7 @@
           </div>
 
           <div class="mb-6">
-            <h3 class="text-lg font-bold mb-2">Soal 3: Estimasi Ukuran Sampel</h3>
+            <h3 class="text-lg font-bold mb-2">Soal 3</h3>
             <p class="mb-2">
               Seorang peneliti ingin mengestimasi proporsi penduduk kota yang mendukung kebijakan baru dengan margin error maksimum 4% dan tingkat kepercayaan 95%. Berapa besar sampel minimum yang dibutuhkan jika tidak ada informasi awal tentang proporsi tersebut?
             </p>
@@ -253,38 +151,6 @@
             </div>
           </div>
         </div>
-
-        <div class="mb-8">
-          <h2 class="text-xl font-bold mb-4 border-b border-gray-300 pb-2">
-            4. Kesimpulan
-          </h2>
-
-          <div class="mb-4">
-            <p class="mb-2">
-              Distribusi sampling merupakan konsep fundamental dalam statistika inferensial yang memungkinkan kita untuk mengestimasi parameter populasi berdasarkan sampel. Beberapa poin penting dari pembahasan di atas:
-            </p>
-            
-            <ul class="list-disc pl-5 space-y-2">
-              <li>
-                <span class="font-semibold">Teorema Limit Pusat</span> memberikan dasar teoritis untuk inferensi statistik, menyatakan bahwa distribusi rata-rata sampel akan mendekati distribusi normal untuk ukuran sampel yang cukup besar, terlepas dari bentuk distribusi populasi aslinya.
-              </li>
-              <li>
-                <span class="font-semibold">Estimasi parameter</span> terdiri dari estimasi titik dan estimasi interval, dimana keduanya penting untuk memperoleh gambaran tentang parameter populasi yang sebenarnya.
-              </li>
-              <li>
-                <span class="font-semibold">Interval kepercayaan</span> memberikan rentang nilai yang dengan probabilitas tertentu mengandung parameter populasi yang sebenarnya, dan lebih informatif dibandingkan estimasi titik.
-              </li>
-              <li>
-                <span class="font-semibold">Ukuran sampel</span> sangat memengaruhi keakuratan estimasi. Semakin besar ukuran sampel, semakin kecil margin error yang dihasilkan.
-              </li>
-            </ul>
-            
-            <p class="mt-4">
-              Pemahaman yang baik tentang distribusi sampling dan interval kepercayaan sangat penting dalam pengambilan keputusan berdasarkan data, terutama dalam penelitian ilmiah, survei opini publik, kendali kualitas, dan berbagai bidang lain yang melibatkan analisis data.
-            </p>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
